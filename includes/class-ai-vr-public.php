@@ -93,16 +93,10 @@ class AI_VR_Public {
 
 	}
 
-	public function ai_vr_recent_posts_shortcode( $atts, $content = null ) {
-		// extract( shortcode_atts( array(
-		// 			'message' => ''
-		// 		), $atts
-		// 	)
-		// );
+	public function ai_vr_recent_posts_shortcode() {
 		ob_start();
 		require_once AI_VR_PATH . 'includes/partials/ai-vr-recent-posts-shortcode.php';
 		return ob_get_clean();
-		// return '<iframe src="' . AI_VR_URL . 'partials/AI_VR-public-display.php' .'"></iframe>';
 	}
 
 }
