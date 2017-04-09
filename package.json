@@ -4,14 +4,16 @@
   "version": "0.0.3",
   "private": true,
   "scripts": {
-    "dev": "webpack-dev-server --content-base ./ --port 8080 --host 127.0.0.1 --config client/config/webpack.config.js -d --inline --hot",
-    "watch": "wp assemble all_assets; webpack --config client/config/webpack.config.js --progress --colors --watch -d",
-    "build": "wp assemble all_assets; NODE_ENV='production' webpack --config client/config/webpack.config.js -p --devtool source-map",
+    "dev": "webpack-dev-server --content-base ./ --port 8080 --host 127.0.0.1 --config app/config/webpack.config.js -d --inline --hot",
+    "watch": "webpack --config app/config/webpack.config.js --progress --colors --watch -d",
+    "build": "webpack --config app/config/webpack.config.js -p --devtool source-map"
   },
   "engines": {
     "node": ">=3.0.0"
   },
   "devDependencies": {
+    "aframe": "^0.5.0",
+    "aframe-outline": "^1.1.0",
     "autoprefixer-loader": "3.2.0",
     "babel-core": "6.18.2",
     "babel-eslint": "7.1.0",

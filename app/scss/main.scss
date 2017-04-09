@@ -1,0 +1,42 @@
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+
+.ai-vr-toggle-scene {
+    background: #000;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    position: fixed;
+    z-index: 1500;
+}
+
+body .ai-vr-toggle-scene a {
+    box-shadow: none;
+    color: #fff;
+    text-decoration: none;
+    transition: color 300ms ease;
+}
+
+body .ai-vr-toggle-scene a:hover {
+    color: #aeaeae;
+}
+
+.ai-vr-scene-container {
+    display: none;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+.ai-vr-scene-container.visible {
+    display: block;
+}
+
+a-scene {
+  height: 100%;
+  width: 100%;
+}
