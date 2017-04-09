@@ -61,19 +61,7 @@ class AI_VR_Public {
 	 */
 	public function enqueue_styles() {
 
-		/**
-		 * This function is provided for demonstration purposes only.
-		 *
-		 * An instance of this class should be passed to the run() function
-		 * defined in AI_VR_Loader as all of the hooks are defined
-		 * in that particular class.
-		 *
-		 * The AI_VR_Loader will then create the relationship
-		 * between the defined hooks and the functions defined in this
-		 * class.
-		 */
-
-		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/ai-vr-public.css', array(), $this->version, 'all' );
+		wp_enqueue_style( $this->plugin_name, AI_VR_URL . '/app/css/ai-vr-public.css', array(), $this->version, 'all' );
 
 	}
 
@@ -83,19 +71,6 @@ class AI_VR_Public {
 	 * @since    1.0.0
 	 */
 	public function enqueue_scripts() {
-
-		/**
-		 * This function is provided for demonstration purposes only.
-		 *
-		 * An instance of this class should be passed to the run() function
-		 * defined in AI_VR_Loader as all of the hooks are defined
-		 * in that particular class.
-		 *
-		 * The AI_VR_Loader will then create the relationship
-		 * between the defined hooks and the functions defined in this
-		 * class.
-		 */
-
 		wp_enqueue_script( 'aframe-core', 'https://aframe.io/releases/0.5.0/aframe.min.js', array(), null, false );
 		wp_enqueue_script( 'aframe-animation', 'https://npmcdn.com/aframe-animation-component@3.0.1', array('aframe-core'), null, false );
 		wp_enqueue_script( 'aframe-events', 'https://npmcdn.com/aframe-event-set-component@3.0.1', array('aframe-core'), null, false );
@@ -104,7 +79,7 @@ class AI_VR_Public {
 		wp_enqueue_script( 'aframe-lookat', 'https://unpkg.com/aframe-look-at-component@0.2.0/dist/aframe-look-at-component.min.js', array('aframe-core'), null, false );
 		wp_enqueue_script( 'aframe-href', 'https://npmcdn.com/aframe-href-component@0.5.1', array('aframe-core'), null, false );
 
-		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/ai-vr-public.js', array( 'jquery', 'aframe-core' ), $this->version, false );
+		wp_enqueue_script( $this->plugin_name, AI_VR_URL . 'app/js/ai-vr-public.js', array( 'jquery', 'aframe-core' ), $this->version, false );
 	}
 
 	/**
@@ -125,11 +100,9 @@ class AI_VR_Public {
 		// 	)
 		// );
 		ob_start();
-		include( plugin_dir_path( __FILE__ ) . 'partials/ai-vr-recent-posts-shortcode.php' );
+		require_once AI_VR_PATH . 'includes/partials/ai-vr-recent-posts-shortcode.php';
 		return ob_get_clean();
-		// return '<iframe src="' . plugin_dir_url( __FILE__ ) . 'partials/AI_VR-public-display.php' .'"></iframe>';
-
+		// return '<iframe src="' . AI_VR_URL . 'partials/AI_VR-public-display.php' .'"></iframe>';
 	}
-
 
 }

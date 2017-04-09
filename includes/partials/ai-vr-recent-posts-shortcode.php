@@ -24,13 +24,13 @@ $entities = AI_VR_Scene()->get_entities();
 <div id="virtual_sitemap">
 	<a-scene embedded>
 		<a-assets>
-
+			<!-- Post Feature Image Assets -->
 			<?php foreach ($assets as $asset): ?>
 				<?php echo $asset; ?>
 			<?php endforeach; ?>
 
-			<img id="goto-link" crossorigin="anonymous" src="<?php echo plugin_dir_url( __FILE__ ) . '../img/link.png'; ?>">
-			<audio id="click-sound" crossorigin="anonymous" src="<?php echo plugin_dir_url( __FILE__ ) . '../audio/click.ogg' ?>"></audio>
+			<img id="goto-link" crossorigin="anonymous" src="<?php echo AI_VR_URL . 'app/img/link.png'; ?>">
+			<audio id="click-sound" crossorigin="anonymous" src="<?php echo AI_VR_URL . 'app/audio/click.ogg' ?>"></audio>
 
 			<!-- Article Template -->
 			<script id="link" type="text/html">

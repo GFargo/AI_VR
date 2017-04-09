@@ -30,12 +30,15 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
+define( 'AI_VR_PATH',  plugin_dir_path( __FILE__ ) );
+define( 'AI_VR_URL',  plugin_dir_url( __FILE__ ) );
+
 /**
  * The code that runs during plugin activation.
  * This action is documented in includes/class-ai-vr-activator.php
  */
 function Activate_AI_VR() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-ai-vr-activator.php';
+	require_once AI_VR_PATH . 'includes/class-ai-vr-activator.php';
 	AI_VR_Activator::activate();
 }
 
@@ -44,7 +47,7 @@ function Activate_AI_VR() {
  * This action is documented in includes/class-ai-vr-deactivator.php
  */
 function Deactivate_AI_VR() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-ai-vr-deactivator.php';
+	require_once AI_VR_PATH . 'includes/class-ai-vr-deactivator.php';
 	AI_VR_Deactivator::deactivate();
 }
 
@@ -55,7 +58,7 @@ register_deactivation_hook( __FILE__, 'Deactivate_AI_VR' );
  * The core plugin class that is used to define internationalization,
  * admin-specific hooks, and public-facing site hooks.
  */
-require plugin_dir_path( __FILE__ ) . 'includes/class-ai-vr.php';
+require AI_VR_PATH . 'includes/class-ai-vr.php';
 
 /**
  * Begins execution of the plugin.
