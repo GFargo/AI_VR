@@ -24,7 +24,7 @@ $entities = AI_VR_Scene()->get_entities();
 <div id="virtual_sitemap">
 	<a-scene embedded>
 		<a-assets>
-			<!-- Post Feature Imageggp Assets -->
+			<!-- Post Feature Image Assets -->
 			<?php foreach ($assets as $asset): ?>
 				<?php echo $asset; ?>
 			<?php endforeach; ?>
