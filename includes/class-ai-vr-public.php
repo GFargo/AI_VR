@@ -61,7 +61,7 @@ class AI_VR_Public {
 	 */
 	public function enqueue_styles() {
 
-		wp_enqueue_style( $this->plugin_name, AI_VR_URL . '/app/css/ai-vr-public.css', array(), $this->version, 'all' );
+		wp_enqueue_style( $this->plugin_name, AI_VR_URL . '/static/css/global.css', array(), $this->version, 'all' );
 
 	}
 
@@ -79,7 +79,7 @@ class AI_VR_Public {
 		wp_enqueue_script( 'aframe-lookat', 'https://unpkg.com/aframe-look-at-component@0.2.0/dist/aframe-look-at-component.min.js', array('aframe-core'), null, false );
 		wp_enqueue_script( 'aframe-href', 'https://npmcdn.com/aframe-href-component@0.5.1', array('aframe-core'), null, false );
 
-		wp_enqueue_script( $this->plugin_name, AI_VR_URL . 'app/js/ai-vr-public.js', array( 'jquery', 'aframe-core' ), $this->version, false );
+		wp_enqueue_script( $this->plugin_name, AI_VR_URL . 'static/js/global.bundle.js', array( 'jquery', 'aframe-core' ), $this->version, false );
 	}
 
 	/**

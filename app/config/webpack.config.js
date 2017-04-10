@@ -35,12 +35,8 @@ if (isHot) {
 module.exports = {
   // Module entry points
   entry: {
-    global: 'client/js/global/global.js',
-    lib: 'lib/assets/js/lib.js',
-    libadmin: 'lib/assets/js/libadmin.js',
-    single: 'client/js/single/single.js',
-    admin: 'client/js/admin/admin.js',
-    login: 'client/js/login/login.js',
+    global: 'app/js/global/index.js',
+    admin: 'app/js/admin/index.js',
   },
 
   // Define module outputs

@@ -21,7 +21,7 @@ $entities = AI_VR_Scene()->get_entities();
 	<a href>Open</a>
 </div>
 
-<div id="virtual_sitemap">
+<div id="ai-vr-scene-container" class="ai-vr-scene-container">
 	<a-scene embedded>
 		<a-assets>
 			<!-- Post Feature Image Assets -->

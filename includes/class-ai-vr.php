@@ -67,14 +67,13 @@ class AI_VR {
 	 * @since    1.0.0
 	 */
 	public function __construct() {
-
 		$this->plugin_name = 'AI_VR';
 		$this->version = '1.0.0';
 
 		$this->load_dependencies();
 		$this->set_locale();
-		$this->define_admin_hooks();
-		$this->define_public_hooks();
+		$this->setup_admin_hooks();
+		$this->setup_public_hooks();
 	}
 
 	/**
@@ -151,7 +150,7 @@ class AI_VR {
 	 * @since    1.0.0
 	 * @access   private
 	 */
-	private function define_admin_hooks() {
+	private function setup_admin_hooks() {
 
 		$plugin_admin = new AI_VR_Admin( $this->get_plugin_name(), $this->get_version() );
 
@@ -167,7 +166,7 @@ class AI_VR {
 	 * @since    1.0.0
 	 * @access   private
 	 */
-	private function define_public_hooks() {
+	private function setup_public_hooks() {
 
 		$plugin_public = new AI_VR_Public( $this->get_plugin_name(), $this->get_version() );
 

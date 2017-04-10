@@ -37,7 +37,7 @@ define( 'AI_VR_URL',  plugin_dir_url( __FILE__ ) );
  * The code that runs during plugin activation.
  * This action is documented in includes/class-ai-vr-activator.php
  */
-function Activate_AI_VR() {
+function activate_ai_vr() {
 	require_once AI_VR_PATH . 'includes/class-ai-vr-activator.php';
 	AI_VR_Activator::activate();
 }
@@ -46,13 +46,13 @@ function Activate_AI_VR() {
  * The code that runs during plugin deactivation.
  * This action is documented in includes/class-ai-vr-deactivator.php
  */
-function Deactivate_AI_VR() {
+function deactivate_ai_vr() {
 	require_once AI_VR_PATH . 'includes/class-ai-vr-deactivator.php';
 	AI_VR_Deactivator::deactivate();
 }
 
-register_activation_hook( __FILE__, 'Activate_AI_VR' );
-register_deactivation_hook( __FILE__, 'Deactivate_AI_VR' );
+register_activation_hook( __FILE__, 'activate_ai_vr' );
+register_deactivation_hook( __FILE__, 'deactivate_ai_vr' );
 
 /**
  * The core plugin class that is used to define internationalization,
@@ -69,9 +69,9 @@ require AI_VR_PATH . 'includes/class-ai-vr.php';
  *
  * @since    1.0.0
  */
-function Run_AI_VR() {
+function run_ai_vr() {
 	$plugin = new AI_VR();
 	$plugin->run();
 }
 
-Run_AI_VR();
+run_ai_vr();
