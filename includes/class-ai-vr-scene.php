@@ -79,8 +79,7 @@ class AI_VR_Scene {
 		if ( empty( $tag ) || empty( $id ) || empty( $src ) ) {
 			return;
 		}
-		// we are going to be building custom tags for most of the
-		// content so to savev time i've decided to compile tags manually.
+		// To save time we're compile tags manually.
 		$asset = sprintf(
 			'<%s id="%s" crossorigin="%s" src="%s">%s',
 			$tag,

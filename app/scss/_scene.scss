@@ -1,0 +1,17 @@
+.ai-vr-scene-container {
+    display: none;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    &.visible {
+        display: block;
+    }
+}
+
+a-scene {
+  height: 100%;
+  width: 100%;
+}

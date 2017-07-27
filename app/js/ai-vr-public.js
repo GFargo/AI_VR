@@ -12,17 +12,19 @@ const $ = require('jquery');
 $(() => {
   document.querySelector('a-scene').pause();
   $('body').removeClass('a-body');
+  // $('html').removeClass('background-fixed a-html');
 
   $('.ai-vr-toggle-scene a').click(function (event) {
     event.preventDefault();
-
     if ($('#ai-vr-scene-container').hasClass('visible')) {
       $(this).text('Open');
       document.querySelector('a-scene').pause();
       $('body').removeClass('a-body');
+      // $('html').removeClass('background-fixed a-html');
     } else {
       $(this).text('Close');
       $('body').addClass('a-body');
+      // $('html').addClass('background-fixed a-html');
       document.querySelector('a-node').load();
       document.querySelector('a-scene').play();
     }

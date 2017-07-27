@@ -1,0 +1,18 @@
+.ai-vr-toggle-scene {
+    background: #000;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    position: fixed;
+    z-index: 1500;
+}
+
+body .ai-vr-toggle-scene a {
+    box-shadow: none;
+    color: #fff;
+    text-decoration: none;
+    transition: color 300ms ease;
+    &:hover {
+        color: #aeaeae;
+    }
+}
